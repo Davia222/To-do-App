@@ -11,7 +11,7 @@ body{
     transition: 0.5s ease-in;
 }
 .body2{
-    background-color: rgb(49, 47, 47);
+    background-color: rgb(29, 28, 28);
     transition: 0.5s ease-in;
 }
 
@@ -24,13 +24,22 @@ body{
     background-size: cover;
     transition: 0.5s ease-in-out;
     animation: shaky2 ease-in-out 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* border: 2px solid black; */
+    width: 100%;
+    margin-bottom: 40px;
 }
+
+
 
 .sun{
     background-image: url(/images/bg-desktop-dark.jpg);
     height: 280px;
     background-repeat: no-repeat;
-    position: relative;
     background-size: cover;
     transition: 0.5s ease-in-out;
     animation: shaky ease-in-out 0.5s;
@@ -48,58 +57,76 @@ body{
     }
 }
 
+.todo-moonDiv{
+    height: 300px;
+    width: 100%;
+    /* border: 5px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 10%;
+    position: fixed;
+}
+
+.h1LightDark{
+    height: 50px;
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+}
+
 .todoH1{
     color: white;
     font-size: 40px;
-    position: absolute;
-    top: 70px;
-    left:400px;
     letter-spacing: 5px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .moonImg{
     background-image: url(/images/icon-moon.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    left: 900px;
-    top: 80px;
+    /* border: 2px solid black; */
     height: 30px;
+    background-repeat: no-repeat;
     width: 30px;
 }
 
 .moonIg{
     background-image: url(/images/icon-sun.svg);
-    position: absolute;
+   
     background-repeat: no-repeat;
-    left: 900px;
-    top: 80px;
+   
     height: 30px;
     width: 30px;
 }
 
-#addTodoInput{
-    position: absolute;
-    left: 60px;
-    height: 100%;
-    width: 458px;
+#addTodoInput{   
+    height: 30px;
+    width: 85%;
     border: none;
     outline: none;
     font-size: 18px;
+    /* border: 2px solid black; */
 }
 
+
 .inpuField{
-    position: absolute;
-    top: 150px;
-    left: 400px;
     height: 50px;
     background-color: white;
-    width: 520px;
+    width: 500px;
     border-radius: 5px;
+    /* border: 2px solid orange; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 
 .enterDiv{
-    position: absolute;
+    
     border: 1px solid #d6d2d2;
     height: 25px;
     width: 25px;
@@ -108,15 +135,21 @@ body{
     border-radius: 50%;
 }
 
+.enter{
+    position: relative;
+    height: 100px;
+    /* border: 2px solid black; */
+    width:500px;
+    margin: auto;
+}
+
 .hafa{
     position: absolute;
-    top: 210px;
     color: red;
-    left: 420px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 1px 7px #aaaaaa;
-    width: 470px;
+    width: 500px;
     animation: rounder 1s infinite ease-in-out;
 }
 
@@ -165,10 +198,6 @@ body{
 
 
 
-.addT{
-    margin-left: 20px;
-    
-}
 .checked{
     background-image: url(/images/icon-check.svg) , linear-gradient(rgb(226, 77, 226),rgb(0, 204, 255));
     background-repeat: no-repeat;
@@ -191,8 +220,92 @@ body{
 
 
 .opera{
-    margin-top: -15px;
+    margin-top: -19px;
     margin-left: 50px;
     color: black;
+    /* border: 2px solid black ; */
 }
 
+
+@media screen and (max-width:510px) {
+    .h1LightDark{
+
+        width: 400px;
+    }
+
+    .inpuField {
+        width: 400px ;
+    }
+
+    .enter{
+        width: 400px;
+    }
+
+    .hafa{
+        width: 400px;
+    }
+
+    .close{
+        margin-left: 340px; 
+    }
+}
+
+@media screen and (max-width:410px) {
+
+    .todoH1{
+       
+        font-size: 26px;
+        
+    }
+
+    .h1LightDark{
+
+        width: 300px;
+    }
+
+    .inpuField {
+        width: 300px ;
+    }
+
+    .enter{
+        width: 300px;
+    }
+
+    .hafa{
+        width: 300px;
+    }
+
+    .close{
+        margin-left: 240px; 
+    }
+}
+
+@media screen and (max-width:310px) {
+
+    .todoH1{
+       
+        font-size: 21px;
+        
+    }
+
+    .h1LightDark{
+
+        width: 250px;
+    }
+
+    .inpuField {
+        width: 250px ;
+    }
+
+    .enter{
+        width: 250px;
+    }
+
+    .hafa{
+        width: 250px;
+    }
+
+    .close{
+        margin-left: 190px; 
+    }
+}
